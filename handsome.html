@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吳家恩</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #151211;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        h1 {
+            font-size: 48px;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #f39c12;
+        }
+        section {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .profile img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .profile img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .profile-text {
+            max-width: 700px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .profile-text:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .profile-text h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .profile-text p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .traits {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 60px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .trait-box {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 30%;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .trait-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .trait-box h3 {
+            font-size: 28px;
+            color: #333;
+        }
+        .trait-box p {
+            font-size: 18px;
+            color: #666;
+        }
+        /* 回到頂部按鈕 */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f39c12;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        #back-to-top:hover {
+            background-color: #e67e22;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            position: relative;
+        }
+        /* 圖片幻燈片輪播 */
+        .slideshow-container {
+            position: relative;
+            max-width: 50%;
+            margin: 40px auto;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>吳家恩</h1>
+        <nav>
+            <a href="#profile">個人介紹</a>
+            <a href="#traits">特質</a>
+            <a href="#gallery">相簿</a>
+        </nav>
+    </header>
+
+    <section id="profile">
+        <div class="profile">
+            <img src="S__5799962.png" alt="吳家恩的照片">
+            <div class="profile-text">
+                <h2>帥氣、瀟灑、多金的吳家恩</h2>
+                <p>
+                    吳家恩，一個令人矚目的存在，他的外表帥氣且瀟灑，無論在哪裡，他總是吸引眾人的目光。他擁有豐富的財富和成功的事業，是一位多金的年輕才俊。不僅如此，他還具有優雅的談吐和風度翩翩的氣質，讓人無法不為之折服。
+                    <br><br>
+                    他對生活充滿熱情，並且時常挑戰自我，從不滿足於現狀。他熱愛旅行，探索世界的每個角落，並且擁有深厚的人文素養。無論是商場上的精英，還是生活中的浪漫主義者，吳家恩都展現出多元且迷人的面貌。
+                    <br><br>
+                    在他的生活中，家人和朋友佔據著重要的地位。他認為成功不僅僅來自於財富的積累，還來自於真摯的關係和美好的回憶。他的品德高尚，總是樂於助人，並且相信愛與分享可以讓世界變得更美好。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="traits">
+        <div class="traits">
+            <div class="trait-box">
+                <h3>帥氣</h3>
+                <p>無論何時何地，吳家恩總是以他那英俊的外表和迷人的笑容俘獲眾人的心。</p>
+            </div>
+            <div class="trait-box">
+                <h3>瀟灑</h3>
+                <p>他充滿自信的舉止和輕鬆自在的生活方式，展現了他瀟灑的一面。</p>
+            </div>
+            <div class="trait-box">
+                <h3>多金</h3>
+                <p>作為一位成功的企業家，吳家恩通過不懈努力積累了豐厚的財富，成為多金的代表。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="slideshow-container">
+            <img class="slides" src="S__5799957.png" alt="侯昰邑照片1">
+            <img class="slides" src="S__5799959.jpg" alt="侯昰邑照片2">
+            <img class="slides" src="S__5799960.jpg" alt="侯昰邑照片3">
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <!-- 回到頂部按鈕 -->
+    <div id="back-to-top" onclick="scrollToTop()">&#8679;</div>
+
+    <footer>
+        <p>吳家恩的個人介紹網站 | 許振東版權所有 &copy; 2024</p>
+    </footer>
+
+    <script>
+        // 圖片幻燈片輪播功能
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 3000); // 每3秒切換圖片
+        }
+
+        function plusSlides(n) {
+            slideIndex += n - 1;
+            showSlides();
+        }
+
+        // 回到頂部按鈕顯示/隱藏
+        window.onscroll = function() {
+            let topButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        };
+
+        // 回到頂部功能
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
